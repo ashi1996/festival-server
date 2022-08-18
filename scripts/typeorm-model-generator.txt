@@ -1,0 +1,4 @@
+# scuffold
+
+LOCAL: npx typeorm-model-generator -h localhost -p 1433 -d MyZone-PG -u MyZoneDev -x MyZoneDev0!ntruder -e mssql -o .
+REMOTE: npx typeorm-model-generator -h ec2-35-157-224-22.eu-central-1.compute.amazonaws.com -p 50715 -d MyZone.Dev -u MyZoneDev -x MZZzero!ntruders -e mssql -o .

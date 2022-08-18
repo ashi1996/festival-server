@@ -1,0 +1,32 @@
+# reference https://docs.nestjs.com/cli/usages
+
+# if you dont install nest globaly you can usages
+npx @nestjs/cli generate <schematic> <name> [options]
+npx @nestjs/cli g <schematic> <name> [options]
+
+# available schematics
+app	      Generate a new application within a monorepo (converting to monorepo if it's a standard structure).
+lib	      Generate a new library within a monorepo (converting to monorepo if it's a standard structure).
+cl	      Generate a new class.
+co	      Generate a controller declaration.
+d	      Generate a custom decorator.
+f	      Generate a filter declaration.
+ga	      Generate a gateway declaration.
+gu	      Generate a guard declaration.
+interface Generate an interface.
+in	      Generate an interceptor declaration.
+mi	      Generate a middleware declaration.
+mo	      Generate a module declaration.
+pi	      Generate a pipe declaration.
+pr	      Generate a provider declaration.
+r	      Generate a resolver declaration.
+res	      Generate a new CRUD resource. See the CRUD (resource) generator for more details.
+s	      Generate a service declaration.
+
+# available options
+--dry-run	 Reports changes that would be made, but does not change the filesystem.
+--project    [project]	Project that element should be added to.
+--flat	     Do not generate a folder for the element.
+--collection [collectionName]	Specify schematics collection. Use package name of installed npm package containing schematic.
+--spec	     Enforce spec files generation (default)
+--no-spec	 Disable spec files generation

@@ -2,9 +2,9 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { AllExceptionsFilter } from './all-exception.filter';
-import { TypeOrmModule } from '@nestjs/typeorm';
+
 import { PagerMiddleware } from './app.middleware';
+import { FestivalsModule } from './festivals/festivals.module';
 
 @Module({
   imports: [
@@ -12,16 +12,15 @@ import { PagerMiddleware } from './app.middleware';
       isGlobal: true,
       expandVariables: true
     }),
+    FestivalsModule
   ],
   controllers: [AppController],
   providers: [
-    AllExceptionsFilter,
     AppService,
   ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-      // consumer.apply(LoggerMiddleware).forRoutes('*')
       consumer.apply(PagerMiddleware).forRoutes({path: '*', method: RequestMethod.GET})
   }
 }

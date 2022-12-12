@@ -10,7 +10,7 @@ const folder_target = 'dist';
 // each property is a reference to .env variable name
 const mapping = [
   {
-    key: '',
+    key: 'MYZONE',
     target: folder_target + '/src/web.config',
     port: 'APP_PORT',
   },

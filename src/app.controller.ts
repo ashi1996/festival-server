@@ -1,7 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
+import { apiBaseRoutes } from './app.const';
 import { AppService } from './app.service';
 
-@Controller('init')
+@Controller(`${apiBaseRoutes.test}`)
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
